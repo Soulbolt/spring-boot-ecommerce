@@ -19,9 +19,8 @@ public class OrderItem {
     @JoinColumn(name = "order_id")
     private Order order;
 
-    @ManyToOne
-    @JoinColumn(name = "product_id")
-    private Product product;
+    @Column(name = "product_id")
+    private Long productId;
 
     @Column(name = "image_url")
     private String imageUrl;
@@ -31,4 +30,6 @@ public class OrderItem {
 
     @Column(name = "unit_price")
     private double unitPrice;
+
+
 }
